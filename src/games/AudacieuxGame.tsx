@@ -11,7 +11,7 @@ import LivesDisplay from "@/components/ui/LivesDisplay";
 import Timer from "@/components/ui/Timer";
 
 const LANE_COUNT = 3;
-const SURVIVAL_TIME = 45;
+const SURVIVAL_TIME = 35;
 const MAX_LIVES = 3;
 const OBSTACLE_INTERVAL_BASE = 900; // ms
 const SPEED_INCREASE_INTERVAL = 10; // seconds

@@ -257,7 +257,7 @@ export default function FinalPage() {
                 <p className="text-foreground/50 text-sm leading-relaxed">
                   Courage, intelligence, honnêteté, harmonie et sacrifice —
                   toutes ces qualités coexistent en toi. C&apos;est ce qui fait ta
-                  force.
+                  force. La solution, c&apos;est la cohésion.
                 </p>
               </motion.div>
 

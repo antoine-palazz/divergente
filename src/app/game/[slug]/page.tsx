@@ -5,10 +5,6 @@ export function generateStaticParams() {
   return GAME_ORDER.map((slug) => ({ slug }));
 }
 
-export default function GamePage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  return <GamePageClient params={params} />;
+export default function GamePage() {
+  return <GamePageClient />;
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { use } from "react";
+import { useParams } from "next/navigation";
 import { notFound } from "next/navigation";
 import GameGuard from "@/components/layout/GameGuard";
 import GameLayout from "@/components/layout/GameLayout";
@@ -20,12 +20,9 @@ const GAME_COMPONENTS: Record<FactionSlug, React.ComponentType> = {
   altruistes: AltruistesGame,
 };
 
-export default function GamePageClient({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const { slug } = use(params);
+export default function GamePageClient() {
+  const params = useParams<{ slug: string }>();
+  const slug = params?.slug;
   const faction = getFaction(slug);
 
   if (!faction) {

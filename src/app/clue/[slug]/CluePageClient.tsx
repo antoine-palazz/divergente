@@ -1,7 +1,7 @@
 "use client";
 
-import { use, useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import { useParams, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { useGameStore, hydrateStore } from "@/store/gameStore";
 import { getFaction, getNextFaction } from "@/data/factions";
@@ -13,11 +13,9 @@ import ProgressBar from "@/components/ui/ProgressBar";
 import PageTransition from "@/components/effects/PageTransition";
 
 export default function CluePageClient({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const { slug } = use(params);
+}: {}) {
+  const params = useParams<{ slug: string }>();
+  const slug = params?.slug;
   const router = useRouter();
   const [hydrated, setHydrated] = useState(false);
   const [displayedText, setDisplayedText] = useState("");
